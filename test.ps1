@@ -1,4 +1,5 @@
-$kv=Get-AzureRMKeyVault|Where-Object {$_.ResourceGroupName -eq "ContosoKeyVaultHSM"}
+$kv=Get-AzureRMKeyVault -VaultName ContosoKeyVaultHSM
+
 $certificateName = "TestCertificate"
 
 $certPolicy = New-AzureKeyVaultCertificatePolicy -SecretContentType "application/x-pkcs12" `
